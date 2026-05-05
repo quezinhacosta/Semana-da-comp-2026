@@ -1,9 +1,24 @@
 @import "tailwindcss";
 
-/* Container Principal */
-.main {
+/* Remove estilos padrões que podem atrapalhar */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Animação do Fundo */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.main-container {
   min-height: 100vh;
-  background-color: #f3eef1; /* Fundo suave */
+  background: linear-gradient(-45deg, #ea9caf, #d56989, #f3eef1, #ea9caf);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,120 +26,89 @@
   font-family: 'Inter', sans-serif;
 }
 
-/* Card Central */
-.card {
-  background: white;
-  max-width: 700px;
+.creative-card {
+  background: rgba(0, 0, 0, 0.85); /* Um pouco mais escuro para garantir contraste */
+  backdrop-filter: blur(12px);
+  max-width: 600px;
   width: 100%;
-  border-radius: 24px;
+  border-radius: 30px;
   padding: 40px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-  border: 1px solid #ea9caf;
+  border: 3px solid #c2dc80;
+  box-shadow: 15px 15px 0px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 10;
 }
 
-/* Cabeçalho */
-.header {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.header h1 {
-  color: #d56989;
-  font-size: 2.5rem;
+.header-title {
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
   margin-bottom: 10px;
-  letter-spacing: -1px;
+  color: #c2dc80;
+  text-shadow: 2px 2px 0px #d56989;
 }
 
-.header p {
-  color: #555;
-  line-height: 1.6;
+.header-text {
+  color: #f3eef1;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
 }
 
-/* Seção de Perfil */
-.profileSection {
-  background-color: #fcf9fa;
-  border-radius: 16px;
-  padding: 25px;
+.profile-wrapper {
+  margin: 30px 0;
   display: flex;
-  gap: 20px;
   align-items: center;
-  border-left: 6px solid #c2dc80;
-  margin-bottom: 30px;
-  transition: transform 0.3s ease;
+  gap: 20px;
 }
 
-.profileSection:hover {
-  transform: translateY(-5px);
-}
-
-.photoContainer {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
+.photo-box {
+  width: 110px;
+  height: 110px;
+  border-radius: 20px;
   overflow: hidden;
-  border: 3px solid #ea9caf;
+  border: 4px solid #ea9caf;
+  transform: rotate(-3deg);
   flex-shrink: 0;
 }
 
-.photoContainer img {
+.photo-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* Lista de Infos */
-.infoList {
+.custom-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.infoList li {
-  color: #444;
-  margin-bottom: 8px;
-  position: relative;
-  padding-left: 20px;
-  font-size: 0.95rem;
+.custom-list li {
+  color: #fff;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  border-left: 4px solid #c2dc80;
 }
 
-.infoList li::before {
-  content: "•";
-  color: #c2dc80;
-  font-weight: bold;
-  position: absolute;
-  left: 0;
-}
-
-/* Botão de Desafio */
-.buttonContainer {
-  display: flex;
-  justify-content: center;
-}
-
-.btnDesafio {
-  background-color: #d56989;
-  color: white;
-  padding: 16px 32px;
-  border-radius: 12px;
+.btn-action {
+  display: block;
+  text-align: center;
+  background-color: #c2dc80;
+  color: #000 !important; /* Força o preto no texto */
+  padding: 18px;
+  border-radius: 50px;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(213, 105, 137, 0.3);
-  border: none;
-  cursor: pointer;
+  margin-top: 25px;
 }
 
-.btnDesafio:hover {
-  background-color: #ea9caf;
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(234, 156, 175, 0.4);
-}
-
-/* Responsividade */
-@media (max-width: 600px) {
-  .profileSection {
-    flex-direction: column;
-    text-align: center;
-  }
+.btn-action:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(194, 220, 128, 0.4);
+  background-color: #fff;
 }

@@ -112,3 +112,13 @@ body, html {
   box-shadow: 0 10px 20px rgba(194, 220, 128, 0.4);
   background-color: #fff;
 }
+
+
+.creative-card {
+  color: #ffffff; 
+}
+
+.custom-list li {
+  color: #ffffff;
+  font-weight: 500;
+}

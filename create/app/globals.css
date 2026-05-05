@@ -1,26 +1,130 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Container Principal */
+.main {
+  min-height: 100vh;
+  background-color: #f3eef1; /* Fundo suave */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Card Central */
+.card {
+  background: white;
+  max-width: 700px;
+  width: 100%;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  border: 1px solid #ea9caf;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Cabeçalho */
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  color: #d56989;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+}
+
+.header p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Seção de Perfil */
+.profileSection {
+  background-color: #fcf9fa;
+  border-radius: 16px;
+  padding: 25px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  border-left: 6px solid #c2dc80;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+}
+
+.profileSection:hover {
+  transform: translateY(-5px);
+}
+
+.photoContainer {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #ea9caf;
+  flex-shrink: 0;
+}
+
+.photoContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Lista de Infos */
+.infoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.infoList li {
+  color: #444;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+  font-size: 0.95rem;
+}
+
+.infoList li::before {
+  content: "•";
+  color: #c2dc80;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Botão de Desafio */
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.btnDesafio {
+  background-color: #d56989;
+  color: white;
+  padding: 16px 32px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(213, 105, 137, 0.3);
+  border: none;
+  cursor: pointer;
+}
+
+.btnDesafio:hover {
+  background-color: #ea9caf;
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(234, 156, 175, 0.4);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .profileSection {
+    flex-direction: column;
+    text-align: center;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }

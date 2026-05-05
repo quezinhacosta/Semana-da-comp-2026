@@ -33,7 +33,7 @@ body, html {
   width: 100%;
   border-radius: 30px;
   padding: 40px;
-  border: 3px solid #c2dc80;
+  border: 3px solid #c0e660;
   box-shadow: 15px 15px 0px rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 10;
@@ -44,7 +44,7 @@ body, html {
   font-weight: 900;
   text-transform: uppercase;
   margin-bottom: 10px;
-  color: #c2dc80;
+  color: #c0e660;
   text-shadow: 2px 2px 0px #d56989;
 }
 
@@ -90,13 +90,13 @@ body, html {
   padding: 8px 12px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
-  border-left: 4px solid #c2dc80;
+  border-left: 4px solid #c0e660;
 }
 
 .btn-action {
   display: block;
   text-align: center;
-  background-color: #c2dc80;
+  background-color: #c0e660;
   color: #000 !important; /* Força o preto no texto */
   padding: 18px;
   border-radius: 50px;
@@ -121,4 +121,13 @@ body, html {
 .custom-list li {
   color: #ffffff;
   font-weight: 500;
+}
+
+.meus-links a {
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.meus-links a:last-child {
+  margin-right: 0; 
 }

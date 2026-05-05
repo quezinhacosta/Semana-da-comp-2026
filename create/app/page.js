@@ -1,5 +1,6 @@
 import Image from "next/image";
 import "./globals.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -7,9 +8,9 @@ export default function Home() {
       <div className="creative-card">
         
         <div className="header-title">Quezia Costa</div>
-        
+
         <p className="header-text">
-          <strong>Bem-vindos ao último dia da semana da tecnologia!</strong>
+          <strong>Criação de uma aplicação web: do planejamento à implementação com uso de IA</strong>
         </p>
         
         <p className="header-text">
@@ -36,6 +37,14 @@ export default function Home() {
         >
           Veja o desafio
         </a>
+
+        <div className="meus-links">
+        <nav>
+          <br></br>
+          <Link href="https://www.linkedin.com/in/quezia-costa-5195342b3/">Linkedin</Link>
+          <Link href="https://github.com/quezinhacosta">Github</Link>
+        </nav>
+      </div>
       </div>
     </main>
   );

@@ -35,7 +35,16 @@ export default function Home() {
           rel="noopener noreferrer"
           className="btn-action"
         >
-          Veja o desafio
+          Desafio 1
+        </a>
+
+        <a 
+          href="https://github.com/quezinhacosta/projeto-minicurso-2026" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="btn-action"
+        >
+          Desafio 2
         </a>
 
         <div className="meus-links">

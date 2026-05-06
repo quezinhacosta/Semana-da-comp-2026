@@ -30,7 +30,7 @@ export default function Home() {
         </div>
 
         <a 
-          href="LINK_DO_SEU_REPOSITORIO_AQUI" 
+          href="https://github.com/quezinhacosta/Jarvis-Minicurso" 
           target="_blank" 
           rel="noopener noreferrer"
           className="btn-action"
